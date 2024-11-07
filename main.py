@@ -13,7 +13,6 @@ def get_limits(color):
 
     return lowerLimit, upperLimit
 
-# Inicia a captura de vídeo
 cap = cv2.VideoCapture(0)
 
 while True:
@@ -22,31 +21,31 @@ while True:
     if not ret:
         break
 
-    # Converte a imagem BGR para o espaço de cores HSV
+    # Converte a imagem RGB para o espaço de cores HSV
     hsvImage = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-    # Definindo a cor amarela em BGR
-    yellow = [0, 255, 255] # Amarelo em BGR
+    # Definindo a cor amarela em RGB
+    yellow = [0, 255, 255] # Amarelo em RGB
     lowerLimit, upperLimit = get_limits(color=yellow)
 
-    # Definindo a cor verde em BGR
-    #green = [0, 255, 0] # Verde em BGR
+    # Definindo a cor verde em RGB
+    #green = [0, 255, 0] # Verde em RGB
     #lowerLimit, upperLimit = get_limits(color=green)
 
-    # Definindo a cor azul em BGR
-    #blue = [255, 0, 0] # Azul em BGR
+    # Definindo a cor azul em RGB
+    #blue = [255, 0, 0] # Azul em RGB
     #lowerLimit, upperLimit = get_limits(color=blue)
 
-    # Definindo a cor ciano em BGR
-    #cian = [255, 255, 0] # Ciano em BGR
+    # Definindo a cor ciano em RGB
+    #cian = [255, 255, 0] # Ciano em RGB
     #lowerLimit, upperLimit = get_limits(color=cian)
 
-    # Definindo a cor roxo em BGR
-    #purple = [255, 0, 255] # Roxo em BGR
+    # Definindo a cor roxo em RGB
+    #purple = [255, 0, 255] # Roxo em RGB
     #lowerLimit, upperLimit = get_limits(color=purple)
 
-    # Definindo a cor laranja em BGR
-    #orange = [0, 125, 255] # laranja em BGR
+    # Definindo a cor laranja em RGB
+    #orange = [0, 125, 255] # laranja em RGB
     #lowerLimit, upperLimit = get_limits(color=orange)
 
     # Cria uma máscara para a cor
